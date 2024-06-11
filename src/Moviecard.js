@@ -1,6 +1,6 @@
 import React from "react";
 
-class Moviecard extends React.Component {
+class MovieCard extends React.Component {
 
     constructor() {
         super();
@@ -115,4 +115,4 @@ class Moviecard extends React.Component {
     }
 }
 
-export default Moviecard;
+export default MovieCard;
