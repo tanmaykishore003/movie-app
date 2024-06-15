@@ -151,13 +151,3 @@ footer.starCount {
     text-shadow: none;
     margin: 5px;
 }
-
-.nav {
-    width: 100%;
-    height: 70px;
-    background-color: cadetblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}

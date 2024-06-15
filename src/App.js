@@ -6,7 +6,6 @@ function App() {
   return (
     <>
         <NavBar />
-        <h1>Movie list</h1>
         <MovieList />
     </>
   );
