@@ -4,7 +4,9 @@ import styled from 'styled-components'
 
 const Nav = styled.div`
     height: 70px;
-    background: linear-gradient(to right, #4267b2, #6a89cc);
+    background: #D2E0FB;
+    /* background: linear-gradient(90deg, #1e3c72, #2a5298); */
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,8 +16,13 @@ const Nav = styled.div`
 
 const Title = styled.div`
     font-size: 2.5rem;
-    color: white;
-    font-family: Bodoni MT
+    color: black;
+    font-family: Bodoni MT;
+    &:hover{
+        font-size: 3rem;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+    }
 `
 
 const CartContainer = styled.div`
@@ -29,7 +36,7 @@ const CartIcon = styled.img`
 `
 
 const CartCount = styled.span`
-    background-color: orange;
+    background-color: ${(props) => props.color};
     border-radius: 50%;
     padding: 4px 8px;
     border: 1px solid black;
@@ -37,6 +44,7 @@ const CartCount = styled.span`
     font-size: 12px;
     top: -5px;
     right: 0.5px;
+    visibility: ${(props) => (props.show === true ? 'visible' : 'hidden')};
 `
 
 export class NavBar extends Component {
@@ -47,7 +55,7 @@ export class NavBar extends Component {
                     <Title>Movie App</Title>
                     <CartContainer>
                         <CartIcon src="https://cdn-icons-png.flaticon.com/128/6737/6737614.png" alt="cart" />
-                        <CartCount>3</CartCount>
+                        <CartCount color='powderblue' show={true}>3</CartCount>
                     </CartContainer>
                 </Nav>
             </>
@@ -57,7 +65,7 @@ export class NavBar extends Component {
 
 export default NavBar
 
-const styles = {
+/* const styles = {
     nav: {
         height: 70,
         background: 'linear-gradient(to right, #4267b2, #6a89cc)',
@@ -94,4 +102,4 @@ const styles = {
         top: -5,
         right: 0.5
     }
-}
+} */
