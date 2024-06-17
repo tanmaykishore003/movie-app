@@ -44,7 +44,7 @@ const CartCount = styled.span`
     font-size: 12px;
     top: -5px;
     right: 0.5px;
-    visibility: ${(props) => (props.show === true ? 'visible' : 'hidden')};
+    visibility: ${(props) => (props.$show ? 'visible' : 'hidden')};
 `
 
 export class NavBar extends Component {
@@ -55,7 +55,7 @@ export class NavBar extends Component {
                     <Title>Movie App</Title>
                     <CartContainer>
                         <CartIcon src="https://cdn-icons-png.flaticon.com/128/6737/6737614.png" alt="cart" />
-                        <CartCount color='powderblue' show={true}>3</CartCount>
+                        <CartCount color='powderblue' $show={true}>3</CartCount>
                     </CartContainer>
                 </Nav>
             </>
